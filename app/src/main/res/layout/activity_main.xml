@@ -7,9 +7,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".View.MainActivity"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:fitsSystemWindows="true">   <!-- 放在 root -->
 
-    <!-- 主內容區（Fragment 會顯示在這裡） -->
     <FrameLayout
         android:id="@+id/fragmentContainerView"
         android:layout_width="0dp"
@@ -19,7 +19,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigationView" />
 
-    <!-- 底部導覽列上方的分隔線（讓 UI 更乾淨） -->
     <View
         android:id="@+id/bottomDivider"
         android:layout_width="0dp"
@@ -29,24 +28,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- 底部導覽列 -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:elevation="10dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="8dp"
-        android:layout_marginBottom="8dp"
-        app:itemIconSize="40dp"
-        app:itemIconTint="@drawable/bottom_nav_selector"
-        app:itemTextColor="@drawable/bottom_nav_selector"
-        app:menu="@menu/bottom_nav_menu"
-        app:labelVisibilityMode="labeled"
-        android:fitsSystemWindows="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    android:background="@color/white"
+    android:elevation="10dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:layout_marginBottom="0dp"
+    app:itemIconSize="28dp"
+    app:itemIconTint="@drawable/bottom_nav_selector"
+    app:itemTextColor="@drawable/bottom_nav_selector"
+    app:menu="@menu/bottom_nav_menu"
+    app:labelVisibilityMode="labeled"
+    android:fitsSystemWindows="false"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

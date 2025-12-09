@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 外框漸層 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="45"
+                android:startColor="#D1C4E9"
+            android:endColor="#B39DDB"
+            android:type="linear" />
+            <corners android:radius="14dp" />
+        </shape>
+    </item>
+
+    <!-- 內層白底（留邊框 2dp） -->
+    <item android:top="2dp" android:bottom="2dp" android:left="2dp" android:right="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FAFAFA" /> <!-- 不死白，柔和一點 -->
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+
+</layer-list>
